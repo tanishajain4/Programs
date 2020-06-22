@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main()
+{int num,sum=0,n,rem;
+cout<<"Enter a number ";
+cin>>num;
+n=num;
+cout<<"Let us see if it is a Harshad Number or not! \n";
+while(n!=0)
+{sum=sum + n%10;
+n=n/10;
+}
+rem=num%sum;
+if(rem==0)
+cout<<num<<" is a Harshad Number";
+else
+cout<<num<< "  is not a Harshad Number";
+return 0;
+}
