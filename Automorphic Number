@@ -1,0 +1,21 @@
+#include<math.h>
+#include<iostream>
+using namespace std;
+int len(int num)
+{int l=0;
+while(num)
+{l++; num=num/10;} return l;}
+int main()
+{int num, sqnum,rem,i,l;
+ cout<<"Enter a number: ";
+ cin>>num;
+ sqnum=num*num;
+ l=len(num);
+ i=pow(10,l);
+ if(sqnum%i == num)
+ cout<<num<< " is an Automorphic Number";
+ else
+ cout<<num<< " is not an Automorphic Number";
+ return 0;
+    
+}
