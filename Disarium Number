@@ -1,24 +1,37 @@
 #include<iostream>
+#include<math.h>
 using namespace std;
-int pronic(int num);
+int disarium(int, int);
+int len(int n);
 int main()
-{
-    int n,i;
-    cout<<"Enter a number ";
-    cin>>n;
-    i=pronic(n);
-    if(i==0)
-    cout<<n<<" is a pronic number";
-    else
-    cout<< n<< " is not a pronic number";
-    return 0;
+{int num,i,l;
+cout<<"Enter a number: ";
+cin>>num;
+l=len(num);
+cout<<"The length of the number is "<<l<<"\n";
+i=disarium(num,l);
+if(i==num)
+cout<<num<<" is a disarium number";
+else
+cout<<num<<" is not a disarium number";
+return 0;
 }
-int pronic(int num)
-{
-    int i;
-    for(i=1;i<=num/2;i++)
-    {if (num%(i*(i+1))==0)
-      return 0;
-    }
-    return -1;
+int len(int n)
+{int l=0;
+while(n!=0)
+{l++;
+n=n/10;
 }
+return l;
+}
+int disarium(int n,int l)
+{int sum=0,rem;
+ while(n!=0)
+ {rem=n%10;
+ n=n/10;
+ sum+=pow(rem,l);
+ l--;
+ }
+ return sum;
+}
+
