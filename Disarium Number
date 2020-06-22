@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int pronic(int num);
+int main()
+{
+    int n,i;
+    cout<<"Enter a number ";
+    cin>>n;
+    i=pronic(n);
+    if(i==0)
+    cout<<n<<" is a pronic number";
+    else
+    cout<< n<< " is not a pronic number";
+    return 0;
+}
+int pronic(int num)
+{
+    int i;
+    for(i=1;i<=num/2;i++)
+    {if (num%(i*(i+1))==0)
+      return 0;
+    }
+    return -1;
+}
