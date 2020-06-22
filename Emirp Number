@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int reverse(int num);
+int primenum(int num);
+int main()
+{int num, rev,i;
+ cout<<"Enter the number: ";
+ cin>>num;
+ i=primenum(num);
+ if(i==0)
+  {rev=reverse(num);
+  cout<<"reverse of the number is "<<rev<<"\n";
+   i=primenum(rev);
+   if(i==0)
+   cout<<num<<" is a emirp number";
+   else 
+   cout<<"Not an emirp number";
+  }
+  else
+  cout<<"Not an emirp number";
+ return 0;
+}
+int reverse(int num)
+{int rem,rev=0;
+while(num!=0)
+{rem=num%10;
+num=num/10;
+rev=rev*10 + rem;
+}
+return rev;
+}
+int primenum(int num)
+{int i;
+ for(i=2;i<=num/2;i++)
+ {if (num%i==0)
+  return -1;
+ }
+ return 0;
+}
