@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+int s=0;
+int digitSum(int n)
+{int sum=0;
+while(n)
+{sum=sum+n%10;
+n=n/10;
+}
+return sum;
+}
+int primefactors(int n)
+{int i;
+   // cout<<"prime factors are: \n";
+   while(n>1)
+    {for(i=2;i<=n;i++)
+    {if(n%i==0)
+     {n=n/i;
+     //cout<<i<<"\n";
+     s=s+digitSum(i);}
+    // primefactors(n);}
+    }}
+    return s;
+    
+}
+int main()
+{int num,sum,k;
+cout<<"Enter a number:";
+cin>>num;
+sum=digitSum(num);
+k=primefactors(num);
+if(sum==k)
+cout<<"Smith Number";
+else
+cout<<"Not a Smith Number";
+return 0;
+}
