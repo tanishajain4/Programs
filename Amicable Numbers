@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int sum_of_factors(int n)
+{int sum=0,i;
+for(i=1;i<n;i++)
+{if(n%i==0)
+sum=sum+i;
+}
+return sum;
+}
+int main()
+{int num1, num2,sum1,sum2;
+cout<<"Enter the two numbers: \n";
+cin>>num1>>num2;
+sum1=sum_of_factors(num1);
+sum2=sum_of_factors(num2);
+if(sum1==num2 && sum2==num1)
+cout<<"Amicable Numbers";
+else
+cout<<"Sorry! They are not amicable numbers";
+return 0;
+}
