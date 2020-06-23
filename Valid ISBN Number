@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+int findsum(long n)
+{string s=to_string(n);
+ int len=s.length();
+ int rem, sum=0;
+ if(len!=10)
+  return 1;
+ while(n)
+ {rem=n%10;
+  n=n/10;
+  sum=sum+len*rem;
+  len--;
+ }
+ return (sum%11);
+}
+int main()
+{long num;
+cout<<"Enter the number: ";
+cin>>num;
+int k=findsum(num);
+if(k==0)
+    cout<<"Valid ISBN number";
+else
+    cout<<"Invalid ISBN number";
+
+    return 0;
+}
