@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int rows,i,j,k=1;
+    cout<<"Enter the range: ";
+    cin>>rows;
+    cout<<"FLOYD'S TRIANGLE";
+    for(i=0;i<rows;i++)
+    {for(j=0;j<=i;j++)
+    {cout<<k<<" ";
+    k++;
+    }
+    cout<<"\n";
+    }
+    return 0;
+}
