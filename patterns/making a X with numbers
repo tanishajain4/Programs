@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main()
+{int n,i,spaces,start=0,rows,j;
+cout<<"Enter the number of rows: ";
+cin>>n;
+rows=n;
+for(i=0;i<=(rows/2-1);i++)
+{for(j=0;j<i;j++)
+  cout<<" ";
+ cout<<i+1;
+ for(j=0;j<(n-2);j++)
+  cout<<" ";
+ cout<<i+1;
+ n=n-2;
+ cout<<"\n";
+}
+for(i=0;i<=(rows/2-1);i++)
+{for(j=0;j<rows/2-i-1;j++)
+ cout<<" ";
+ cout<<rows/2+i+1;
+ for(j=0;j<start;j++)
+ cout<<" ";
+ cout<<rows/2+i+1;
+ start=start+2;
+ cout<<"\n";
+}
+return 0;
+}
