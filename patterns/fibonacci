@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{int n; int first,second,temp;
+cout<<"Enter the number of rows: ";
+cin>>n;
+for(int i=0;i<n;i++)
+{first=0; second=1;
+cout<<first<<"";
+if(i>0) cout<<second<<"";
+for(int j=0;j<i-1;j++)
+{second=first+second;
+first=second-first;
+cout<<second<<"";
+} cout<<"\n";}
+return 0;
+}
