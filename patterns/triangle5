@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int rows,i,j;
+    cout<<"Enter the number of rows:";
+    cin>>rows;
+    for(i=1;i<=rows;i++)
+    {
+    char c=65;
+    for(j=1;j<i;j++)
+    cout<<" ";
+    for(int j=rows;j>=i;j--)
+    {
+    cout<<c;
+    c++;
+    }
+    for(int j=rows;j>=i;j--)
+    {c--;
+    cout<<c;
+    
+    }
+    cout<<"\n";
+    }
+    return 0;
+}
