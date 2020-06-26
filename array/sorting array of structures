@@ -1,0 +1,44 @@
+#include <iostream>
+#include<conio.h>
+using namespace std;
+struct s{
+    int age;
+    int id;
+    string name;
+}st[4],temp;
+int main()
+{
+    int i,j;
+    for(i=0;i<4;i++)
+    {  cout<<"Enter your name:";
+        cin>>st[i].name;
+        cout<<"Enter your age:";
+        cin>>st[i].age;
+        cout<<"Enter you ID no:";
+        cin>>st[i].id;
+        getch();    
+    }
+    for(i=0;i<4;i++)
+    {
+        for(j=i;j<4;j++)
+        {if(st[i].id>st[j].id)
+        {
+            temp=st[i];
+            st[i]=st[j];
+            st[j]=temp;
+        }
+            
+        }
+    }
+    
+    cout<<"The sorted structure is:";
+    for(i=0;i<4;i++)
+    {
+        cout<<"Employee "<<i+1;
+        cout<<"\n ID:"<<st[i].id;
+        cout<<"\n Name:"<<st[i].name;
+        cout<<"\n Age:"<<st[i].age;
+        cout<<"\n";
+    }
+        return 0;
+}
